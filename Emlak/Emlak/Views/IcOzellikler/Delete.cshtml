@@ -1,0 +1,40 @@
+﻿@model Emlak.Models.IlanIcOzellik
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>IlanIcOzellik</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ICOID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ICOID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IcOzellik.IcOzellik1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IcOzellik.IcOzellik1)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ilan.IlanBaslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ilan.IlanBaslik)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

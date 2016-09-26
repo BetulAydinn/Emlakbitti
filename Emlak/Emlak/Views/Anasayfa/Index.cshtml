@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/KullaniciAnasayfa.cshtml";
+}
+
+@model IEnumerable<Emlak.Models.Ilan>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<link href="~/Content/css/Site.css" rel="stylesheet" />
+<link href="~/Content/css/css/style.css" rel="stylesheet" />
+    <div id="ana_div">
+       
+            @foreach(var item in Model){
+            
+
+                <div class="div_liste" style="float:left">
+
+                    <div class="pricing-table premium">
+                        <span class="table-head">
+                            <img src="~/images/@item.IlanVResim" width="300" height="200" />
+                        </span>
+                        <span class="price">
+                            @Html.DisplayFor(modelItem => item.IlanBaslik)
+                        </span>
+                        <span class="table-row">@Html.DisplayFor(modelItem => item.İlanFiyat)</span>
+                        <span class="table-row">@Html.DisplayFor(modelItem => item.IlanTarih)</span>
+                      <span class="table-row">@Html.DisplayFor(modelItem => item.Kategori.KategoriAd)</span>
+            <span class="table-row">@Html.DisplayFor(modelItem => item.Islem.IslemAd)</span>
+            <span class="table-row">@Html.DisplayFor(modelItem => item.Kimden.KimdenAd)</span>
+            <span class="table-row">@Html.DisplayFor(modelItem => item.IlanAdres)</span>
+                        <span class="table-row">@Html.DisplayFor(modelItem => item.IlanAciklama)</span>
+
+                        <div class="purchase">
+
+                                <button type="button"  class="myButton" onclick="location.href='@Url.Action("Index", "IlanDetayGoster", new {id=item.IlanID })'">İncele </button>
+
+                        </div>
+
+
+
+
+
+                </div>
+
+    </div>
+            }
+                </div>
+    

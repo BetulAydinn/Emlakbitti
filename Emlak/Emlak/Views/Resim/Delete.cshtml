@@ -1,0 +1,40 @@
+﻿@model Emlak.Models.Resim
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Resim</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ResimAd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResimAd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ilan.IlanBaslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ilan.IlanBaslik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ResimYol)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResimYol)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

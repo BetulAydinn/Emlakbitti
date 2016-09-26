@@ -1,0 +1,33 @@
+﻿@model Emlak.Models.admin
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>admin</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AdminKullanici)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AdminKullanici)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AdminSifre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AdminSifre)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

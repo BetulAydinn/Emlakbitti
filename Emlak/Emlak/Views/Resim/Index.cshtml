@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Emlak.Models.Resim>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimAd)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ilan.IlanBaslik)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ResimYol)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ResimAd)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ilan.IlanBaslik)
+        </td>
+        <td>
+           <img src="~/images/@item.ResimYol" width="100" height="100" />
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.ResimID }) |
+            @Html.ActionLink("Details", "Details", new { id=item.ResimID }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.ResimID })
+        </td>
+    </tr>
+}
+
+</table>

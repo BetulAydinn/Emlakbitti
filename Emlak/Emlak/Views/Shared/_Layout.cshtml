@@ -1,0 +1,54 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/css/Site.css")
+
+</head>
+<body>
+
+    <div id="cerceve" >
+        <div id="kafa">
+
+            <img class="logo" src="~/Content/img/home-clip-art-jkbU3n-clipart copy.png" /> 
+            <img src="~/Content/img/Emlak.jpg" />
+        </div>
+        <div id="govde">
+            <div class="govdesol">
+                <button class='buton buton-sola' type="button" onclick="location.href='@Url.Action("Index","Ilan")'">
+                    <span><i class="fa fa-chevron-left"></i> İlan Ekle &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                </button>
+                <button class='buton buton-sola' type="button" onclick="location.href='@Url.Action("Index","IcOzellikler")'">
+                    <span><i class="fa fa-chevron-left"></i> İç Özellikler &nbsp;&nbsp;&nbsp;&nbsp;</span>
+                </button>
+                <button class='buton buton-sola' type="button" onclick="location.href='@Url.Action("Index","Resim")'">
+                    <span><i class="fa fa-chevron-left"></i> Resimler &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                </button>
+                <button class='buton buton-sola' type="button" onclick="location.href='@Url.Action("Index","Default1")'">
+                    <span><i class="fa fa-chevron-left"></i>Dış Özellikler &nbsp;&nbsp;&nbsp;</span>
+                </button>
+                <button class='buton buton-sola' type="button" onclick="location.href='@Url.Action("Index","Kategori")'">
+                    <span><i class="fa fa-chevron-left"></i> Kategoriler&nbsp;&nbsp; &nbsp;&nbsp; &nbsp; </span>
+                </button>
+                <button class='buton buton-sola' type="button" onclick="location.href='@Url.Action("Index","Islem")'">
+                    <span><i class="fa fa-chevron-left"></i> İşlemler &nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; </span>
+                </button>
+                <button class='buton buton-sola' type="button" onclick="location.href='@Url.Action("Index","IlanDetay")'">
+                    <span><i class="fa fa-chevron-left"></i> İlan Detayları &nbsp;&nbsp;&nbsp;</span>
+                </button>
+            
+            </div>
+            <div class="govdesag" style="width:800px">@RenderBody()</div>
+         
+        </div>
+        <div id="footer"></div>
+        
+    </div>
+ @Scripts.Render("~/bundles/jquery")
+@RenderSection("scripts", required: false)
+
+</body>
+</html>

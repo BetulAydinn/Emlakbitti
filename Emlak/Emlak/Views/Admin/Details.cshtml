@@ -1,0 +1,29 @@
+﻿@model Emlak.Models.admin
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>admin</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AdminKullanici)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AdminKullanici)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.AdminSifre)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.AdminSifre)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.AdminID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

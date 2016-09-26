@@ -1,0 +1,64 @@
+﻿@model Emlak.Models.IlanDetay
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>IlanDetay</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdOdaSayisi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdOdaSayisi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdBinaYasi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdBinaYasi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdEsyaliMi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdEsyaliMi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdBinaKat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdBinaKat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdBinaKacinciKat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdBinaKacinciKat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdBinaIsitma)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdBinaIsitma)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ilan.IlanBaslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ilan.IlanBaslik)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.IlanDetayID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,55 @@
+﻿@model Emlak.Models.Resim
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Resim", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Resim</legend>
+
+        @Html.HiddenFor(model => model.ResimID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ResimAd)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ResimAd)
+            @Html.ValidationMessageFor(model => model.ResimAd)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IlanID, "Ilan")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IlanID", String.Empty)
+            @Html.ValidationMessageFor(model => model.IlanID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ResimYol)
+        </div>
+        <div class="editor-field">
+            <input type="file" name="file" />
+            @Html.ValidationMessageFor(model => model.ResimYol)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,84 @@
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\Emlak.dll.config
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\Emlak.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\Emlak.pdb
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\Antlr3.Runtime.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\EntityFramework.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\Microsoft.Web.Infrastructure.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\Newtonsoft.Json.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.Mvc.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.Optimization.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.Providers.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.Razor.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.WebPages.Deployment.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.WebPages.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.WebPages.Razor.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\WebGrease.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\EntityFramework.xml
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\Newtonsoft.Json.xml
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.Mvc.xml
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.Razor.xml
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.WebPages.xml
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.WebPages.Deployment.xml
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\bin\System.Web.WebPages.Razor.xml
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\obj\Debug\Emlak.csprojResolveAssemblyReference.cache
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\obj\Debug\Emlak.dll
+c:\users\bilsa\documents\visual studio 2013\Projects\Emlak\Emlak\obj\Debug\Emlak.pdb
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\Emlak.dll.config
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\Emlak.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\Emlak.pdb
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\Antlr3.Runtime.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\EntityFramework.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\Newtonsoft.Json.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.Mvc.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.Optimization.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.Providers.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.Razor.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.WebPages.Deployment.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.WebPages.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.WebPages.Razor.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\WebGrease.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\EntityFramework.xml
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\Newtonsoft.Json.xml
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.Mvc.xml
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.Razor.xml
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.WebPages.xml
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.WebPages.Deployment.xml
+C:\Users\Bilsa\Desktop\Emlak\Emlak\bin\System.Web.WebPages.Razor.xml
+C:\Users\Bilsa\Desktop\Emlak\Emlak\obj\Debug\Emlak.csprojResolveAssemblyReference.cache
+C:\Users\Bilsa\Desktop\Emlak\Emlak\obj\Debug\Emlak.dll
+C:\Users\Bilsa\Desktop\Emlak\Emlak\obj\Debug\Emlak.pdb
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\Emlak.dll.config
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\Emlak.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\Emlak.pdb
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\Antlr3.Runtime.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\EntityFramework.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\Microsoft.Web.Infrastructure.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\Microsoft.Web.Mvc.FixedDisplayModes.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\Newtonsoft.Json.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Net.Http.Formatting.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Http.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Http.WebHost.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Mvc.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Optimization.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Providers.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Razor.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.WebPages.Deployment.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.WebPages.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.WebPages.Razor.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\WebGrease.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\EntityFramework.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\Newtonsoft.Json.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Net.Http.Formatting.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Http.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Http.WebHost.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Mvc.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.Razor.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.WebPages.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.WebPages.Deployment.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\bin\System.Web.WebPages.Razor.xml
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\obj\Debug\Emlak.csprojResolveAssemblyReference.cache
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\obj\Debug\Emlak.dll
+C:\Users\PACKARD BELL\Desktop\Emlakbitti\Emlak\Emlak\obj\Debug\Emlak.pdb

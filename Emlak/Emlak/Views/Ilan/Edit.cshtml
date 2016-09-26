@@ -1,0 +1,111 @@
+﻿@model Emlak.Models.Ilan
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm("Edit", "Ilan", FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Ilan</legend>
+
+        @Html.HiddenFor(model => model.IlanID)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IlanBaslik)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IlanBaslik)
+            @Html.ValidationMessageFor(model => model.IlanBaslik)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.İlanFiyat)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.İlanFiyat)
+            @Html.ValidationMessageFor(model => model.İlanFiyat)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IlanTarih)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IlanTarih)
+            @Html.ValidationMessageFor(model => model.IlanTarih)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.KategoriID, "Kategori")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("KategoriID", String.Empty)
+            @Html.ValidationMessageFor(model => model.KategoriID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IslemID, "Islem")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("IslemID", String.Empty)
+            @Html.ValidationMessageFor(model => model.IslemID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.KimdenID, "Kimden")
+        </div>
+        <div class="editor-field">
+            @Html.DropDownList("KimdenID", String.Empty)
+            @Html.ValidationMessageFor(model => model.KimdenID)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IlanVResim)
+        </div>
+        <div class="editor-field">
+            <input type="file" name="file" />
+            @Html.ValidationMessageFor(model => model.IlanVResim)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IlanAdres)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IlanAdres)
+            @Html.ValidationMessageFor(model => model.IlanAdres)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IlanAciklama)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IlanAciklama)
+            @Html.ValidationMessageFor(model => model.IlanAciklama)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.IlanVitrin)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.IlanVitrin)
+            @Html.ValidationMessageFor(model => model.IlanVitrin)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -1,0 +1,36 @@
+﻿@model Emlak.Models.Resim
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Resim</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ResimAd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResimAd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ilan.IlanBaslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ilan.IlanBaslik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ResimYol)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ResimYol)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.ResimID }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

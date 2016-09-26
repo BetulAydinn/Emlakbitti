@@ -1,0 +1,76 @@
+﻿@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/KullaniciAnasayfa.cshtml";
+}
+
+@model IEnumerable<Emlak.Models.IlanDetayGoster>
+
+
+          @foreach (var item in Model)
+          {
+            <div class="divv">
+                <table>
+
+                    <tr >
+                        <td colspan="2" rowspan="8">
+                            <img src="~/images/@item.ResimYol" width="700" height="500" />
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Ilan:
+                        </td>
+                        <td>@item.IlanBaslik</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Ilan Fiyatı:
+                        </td>
+                        <td>@item.IlanFiyat</td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Bina Oda Sayısı:
+                        </td>
+                        <td>@item.IdOdaSayisi</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Bina Yaşı:
+                        </td>
+                        <td>@item.IdBinaYasi</td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Bina Kat:
+                        </td>
+                        <td>
+                            @item.IdBinaKat
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Kaçıncı Kat:
+                    </td>
+                    <td>@item.IdBinaKacinciKat</td>
+                </tr>
+
+
+        
+
+                <tr>
+                    <td>
+                        Açıklama:
+                    </td>
+                    <td>@item.IlanAciklama</td>
+                </tr>
+
+
+
+            </table>
+        </div>
+
+          }

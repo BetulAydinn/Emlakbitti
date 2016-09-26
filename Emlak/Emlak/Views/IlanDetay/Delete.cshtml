@@ -1,0 +1,68 @@
+﻿@model Emlak.Models.IlanDetay
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>IlanDetay</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdOdaSayisi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdOdaSayisi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdBinaYasi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdBinaYasi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdEsyaliMi)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdEsyaliMi)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdBinaKat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdBinaKat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdBinaKacinciKat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdBinaKacinciKat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IdBinaIsitma)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IdBinaIsitma)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ilan.IlanBaslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ilan.IlanBaslik)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

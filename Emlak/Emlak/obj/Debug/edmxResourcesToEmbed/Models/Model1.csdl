@@ -1,0 +1,345 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="emlakModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="admin">
+    <Key>
+      <PropertyRef Name="AdminID" />
+    </Key>
+    <Property Name="AdminID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="AdminKullanici" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="AdminSifre" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="DısOzellik">
+    <Key>
+      <PropertyRef Name="DOID" />
+    </Key>
+    <Property Name="DOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="DısOzellik1" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="IlanDısOzellik" Relationship="Self.FK_IlanDısOzellik_DısOzellik" FromRole="DısOzellik" ToRole="IlanDısOzellik" />
+  </EntityType>
+  <EntityType Name="IcOzellik">
+    <Key>
+      <PropertyRef Name="IOID" />
+    </Key>
+    <Property Name="IcOzellik1" Type="String" MaxLength="20" FixedLength="true" Unicode="true" />
+    <Property Name="IOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <NavigationProperty Name="IlanIcOzellik" Relationship="Self.FK_IlanIcOzellik_IcOzellik1" FromRole="IcOzellik" ToRole="IlanIcOzellik" />
+  </EntityType>
+  <EntityType Name="Ilan">
+    <Key>
+      <PropertyRef Name="IlanID" />
+    </Key>
+    <Property Name="IlanID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IlanBaslik" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="İlanFiyat" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="IlanTarih" Type="DateTime" Precision="0" />
+    <Property Name="KategoriID" Type="Int32" />
+    <Property Name="IslemID" Type="Int32" />
+    <Property Name="KimdenID" Type="Int32" />
+    <Property Name="IlanVResim" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="IlanAdres" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <Property Name="IlanAciklama" Type="String" MaxLength="500" FixedLength="true" Unicode="true" />
+    <Property Name="IlanVitrin" Type="Boolean" />
+    <NavigationProperty Name="Islem" Relationship="Self.FK_Ilan_Islem" FromRole="Ilan" ToRole="Islem" />
+    <NavigationProperty Name="Kategori" Relationship="Self.FK_Ilan_Kategori" FromRole="Ilan" ToRole="Kategori" />
+    <NavigationProperty Name="Kimden" Relationship="Self.FK_Ilan_Kimden" FromRole="Ilan" ToRole="Kimden" />
+    <NavigationProperty Name="IlanDetay" Relationship="Self.FK_IlanDetay_Ilan" FromRole="Ilan" ToRole="IlanDetay" />
+    <NavigationProperty Name="IlanDısOzellik" Relationship="Self.FK_IlanDısOzellik_Ilan" FromRole="Ilan" ToRole="IlanDısOzellik" />
+    <NavigationProperty Name="IlanIcOzellik" Relationship="Self.FK_IlanIcOzellik_Ilan1" FromRole="Ilan" ToRole="IlanIcOzellik" />
+    <NavigationProperty Name="Resim" Relationship="Self.FK_Resim_Ilan" FromRole="Ilan" ToRole="Resim" />
+  </EntityType>
+  <EntityType Name="IlanDetay">
+    <Key>
+      <PropertyRef Name="IlanDetayID" />
+    </Key>
+    <Property Name="IlanDetayID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IdOdaSayisi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IdBinaYasi" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IdEsyaliMi" Type="Boolean" />
+    <Property Name="IdBinaKat" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IdBinaKacinciKat" Type="String" MaxLength="10" FixedLength="true" Unicode="true" />
+    <Property Name="IdBinaIsitma" Type="Boolean" />
+    <Property Name="IlanID" Type="Int32" />
+    <NavigationProperty Name="Ilan" Relationship="Self.FK_IlanDetay_Ilan" FromRole="IlanDetay" ToRole="Ilan" />
+  </EntityType>
+  <EntityType Name="IlanDısOzellik">
+    <Key>
+      <PropertyRef Name="IDOID" />
+    </Key>
+    <Property Name="IDOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IlanID" Type="Int32" Nullable="false" />
+    <Property Name="DOID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="DısOzellik" Relationship="Self.FK_IlanDısOzellik_DısOzellik" FromRole="IlanDısOzellik" ToRole="DısOzellik" />
+    <NavigationProperty Name="Ilan" Relationship="Self.FK_IlanDısOzellik_Ilan" FromRole="IlanDısOzellik" ToRole="Ilan" />
+  </EntityType>
+  <EntityType Name="IlanIcOzellik">
+    <Key>
+      <PropertyRef Name="ICOID" />
+    </Key>
+    <Property Name="ICOID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IOID" Type="Int32" />
+    <Property Name="IlanID" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="IcOzellik" Relationship="Self.FK_IlanIcOzellik_IcOzellik1" FromRole="IlanIcOzellik" ToRole="IcOzellik" />
+    <NavigationProperty Name="Ilan" Relationship="Self.FK_IlanIcOzellik_Ilan1" FromRole="IlanIcOzellik" ToRole="Ilan" />
+  </EntityType>
+  <EntityType Name="Islem">
+    <Key>
+      <PropertyRef Name="IslemID" />
+    </Key>
+    <Property Name="IslemID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="IslemAd" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Ilan" Relationship="Self.FK_Ilan_Islem" FromRole="Islem" ToRole="Ilan" />
+  </EntityType>
+  <EntityType Name="Kategori">
+    <Key>
+      <PropertyRef Name="KategoriID" />
+    </Key>
+    <Property Name="KategoriID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KategoriAd" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Ilan" Relationship="Self.FK_Ilan_Kategori" FromRole="Kategori" ToRole="Ilan" />
+  </EntityType>
+  <EntityType Name="Kimden">
+    <Key>
+      <PropertyRef Name="KimdenID" />
+    </Key>
+    <Property Name="KimdenID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="KimdenAd" Type="String" MaxLength="50" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="Ilan" Relationship="Self.FK_Ilan_Kimden" FromRole="Kimden" ToRole="Ilan" />
+  </EntityType>
+  <EntityType Name="Resim">
+    <Key>
+      <PropertyRef Name="ResimID" />
+    </Key>
+    <Property Name="ResimID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ResimAd" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <Property Name="IlanID" Type="Int32" />
+    <Property Name="ResimYol" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Ilan" Relationship="Self.FK_Resim_Ilan" FromRole="Resim" ToRole="Ilan" />
+  </EntityType>
+  <EntityType Name="sysdiagrams">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK_IlanDısOzellik_DısOzellik">
+    <End Role="DısOzellik" Type="Self.DısOzellik" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IlanDısOzellik" Type="Self.IlanDısOzellik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="DısOzellik">
+        <PropertyRef Name="DOID" />
+      </Principal>
+      <Dependent Role="IlanDısOzellik">
+        <PropertyRef Name="DOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IlanIcOzellik_IcOzellik1">
+    <End Role="IcOzellik" Type="Self.IcOzellik" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IlanIcOzellik" Type="Self.IlanIcOzellik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="IcOzellik">
+        <PropertyRef Name="IOID" />
+      </Principal>
+      <Dependent Role="IlanIcOzellik">
+        <PropertyRef Name="IOID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ilan_Islem">
+    <End Role="Islem" Type="Self.Islem" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ilan" Type="Self.Ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Islem">
+        <PropertyRef Name="IslemID" />
+      </Principal>
+      <Dependent Role="Ilan">
+        <PropertyRef Name="IslemID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ilan_Kategori">
+    <End Role="Kategori" Type="Self.Kategori" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ilan" Type="Self.Ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kategori">
+        <PropertyRef Name="KategoriID" />
+      </Principal>
+      <Dependent Role="Ilan">
+        <PropertyRef Name="KategoriID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Ilan_Kimden">
+    <End Role="Kimden" Type="Self.Kimden" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Ilan" Type="Self.Ilan" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Kimden">
+        <PropertyRef Name="KimdenID" />
+      </Principal>
+      <Dependent Role="Ilan">
+        <PropertyRef Name="KimdenID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IlanDetay_Ilan">
+    <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IlanDetay" Type="Self.IlanDetay" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ilan">
+        <PropertyRef Name="IlanID" />
+      </Principal>
+      <Dependent Role="IlanDetay">
+        <PropertyRef Name="IlanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IlanDısOzellik_Ilan">
+    <End Role="Ilan" Type="Self.Ilan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IlanDısOzellik" Type="Self.IlanDısOzellik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ilan">
+        <PropertyRef Name="IlanID" />
+      </Principal>
+      <Dependent Role="IlanDısOzellik">
+        <PropertyRef Name="IlanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_IlanIcOzellik_Ilan1">
+    <End Role="Ilan" Type="Self.Ilan" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="IlanIcOzellik" Type="Self.IlanIcOzellik" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ilan">
+        <PropertyRef Name="IlanID" />
+      </Principal>
+      <Dependent Role="IlanIcOzellik">
+        <PropertyRef Name="IlanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Resim_Ilan">
+    <End Role="Ilan" Type="Self.Ilan" Multiplicity="0..1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="Resim" Type="Self.Resim" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Ilan">
+        <PropertyRef Name="IlanID" />
+      </Principal>
+      <Dependent Role="Resim">
+        <PropertyRef Name="IlanID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="emlakEntities6" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="admin" EntityType="Self.admin" />
+    <EntitySet Name="DısOzellik" EntityType="Self.DısOzellik" />
+    <EntitySet Name="IcOzellik" EntityType="Self.IcOzellik" />
+    <EntitySet Name="Ilan" EntityType="Self.Ilan" />
+    <EntitySet Name="IlanDetay" EntityType="Self.IlanDetay" />
+    <EntitySet Name="IlanDısOzellik" EntityType="Self.IlanDısOzellik" />
+    <EntitySet Name="IlanIcOzellik" EntityType="Self.IlanIcOzellik" />
+    <EntitySet Name="Islem" EntityType="Self.Islem" />
+    <EntitySet Name="Kategori" EntityType="Self.Kategori" />
+    <EntitySet Name="Kimden" EntityType="Self.Kimden" />
+    <EntitySet Name="Resim" EntityType="Self.Resim" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <AssociationSet Name="FK_IlanDısOzellik_DısOzellik" Association="Self.FK_IlanDısOzellik_DısOzellik">
+      <End Role="DısOzellik" EntitySet="DısOzellik" />
+      <End Role="IlanDısOzellik" EntitySet="IlanDısOzellik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IlanIcOzellik_IcOzellik1" Association="Self.FK_IlanIcOzellik_IcOzellik1">
+      <End Role="IcOzellik" EntitySet="IcOzellik" />
+      <End Role="IlanIcOzellik" EntitySet="IlanIcOzellik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ilan_Islem" Association="Self.FK_Ilan_Islem">
+      <End Role="Islem" EntitySet="Islem" />
+      <End Role="Ilan" EntitySet="Ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ilan_Kategori" Association="Self.FK_Ilan_Kategori">
+      <End Role="Kategori" EntitySet="Kategori" />
+      <End Role="Ilan" EntitySet="Ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Ilan_Kimden" Association="Self.FK_Ilan_Kimden">
+      <End Role="Kimden" EntitySet="Kimden" />
+      <End Role="Ilan" EntitySet="Ilan" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IlanDetay_Ilan" Association="Self.FK_IlanDetay_Ilan">
+      <End Role="Ilan" EntitySet="Ilan" />
+      <End Role="IlanDetay" EntitySet="IlanDetay" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IlanDısOzellik_Ilan" Association="Self.FK_IlanDısOzellik_Ilan">
+      <End Role="Ilan" EntitySet="Ilan" />
+      <End Role="IlanDısOzellik" EntitySet="IlanDısOzellik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_IlanIcOzellik_Ilan1" Association="Self.FK_IlanIcOzellik_Ilan1">
+      <End Role="Ilan" EntitySet="Ilan" />
+      <End Role="IlanIcOzellik" EntitySet="IlanIcOzellik" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Resim_Ilan" Association="Self.FK_Resim_Ilan">
+      <End Role="Ilan" EntitySet="Ilan" />
+      <End Role="Resim" EntitySet="Resim" />
+    </AssociationSet>
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(emlakModel.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(emlakModel.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+</Schema>

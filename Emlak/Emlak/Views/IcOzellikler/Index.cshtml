@@ -1,0 +1,45 @@
+﻿@model IEnumerable<Emlak.Models.IlanIcOzellik>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table>
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.ICOID)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.IcOzellik.IcOzellik1)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Ilan.IlanBaslik)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.ICOID)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.IcOzellik.IcOzellik1)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Ilan.IlanBaslik)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id = item.ICOID }) |
+            @Html.ActionLink("Details", "Details", new { id = item.ICOID }) |
+            @Html.ActionLink("Delete", "Delete", new { id = item.ICOID })
+        </td>
+    </tr>
+}
+
+</table>

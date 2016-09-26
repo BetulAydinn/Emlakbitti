@@ -1,0 +1,78 @@
+﻿@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+    @Styles.Render("~/Content/css/Site.css")
+    <link href="~/Content/style.css" rel="stylesheet" />
+    <script src="~/Content/scripts/jquery.js"></script>
+    <script src="~/Content/scripts/slider.js"></script>
+
+</head>
+<body>
+
+    <div id="cerceve">
+        <div id="kafa">
+
+            <img class="logo"  src="~/Content/img/house-logo-png.png" />
+          
+            <img src="~/Content/img/Emlak2.jpg" />
+     
+          
+        </div>
+        <div class="govdeust">
+            <div class="slider">
+                <a href="#" class="onceki"><</a>
+                <a href="#" class="sonraki">></a>
+                <ul class="slider_liste">
+                    <li>
+                        <a href="#">
+
+                            <img src="~/Content/css/SliderImages/edkapak.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+
+                            <img src="~/Content/css/SliderImages/K1191-Bodrum-Yalıkavak-Malikane-Villa-Müstakil-Deniz-5.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <img src="~/Content/css/SliderImages/Malikane1(1).jpg" />
+                      
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+
+                            <img src="~/Content/css/SliderImages/mayweather-in-yeni-malikanesi-goz-11750-39492.jpg" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+
+                            <img src="~/Content/css/SliderImages/minecraft-in-yaraticisi-70-milyon-dolara-malikane-satin-aldi-705x290.jpg" />
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div> 
+
+        <div id="govde">@RenderBody()</div>
+
+    </div>
+        <div id="footer"></div>
+
+  
+    @Scripts.Render("~/bundles/jquery")
+    @RenderSection("scripts", required: false)
+
+</body>
+</html>

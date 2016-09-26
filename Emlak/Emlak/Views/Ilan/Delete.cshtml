@@ -1,0 +1,89 @@
+﻿@model Emlak.Models.Ilan
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Ilan</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IlanBaslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IlanBaslik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.İlanFiyat)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.İlanFiyat)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IlanTarih)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IlanTarih)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Kategori.KategoriAd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Kategori.KategoriAd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Islem.IslemAd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Islem.IslemAd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Kimden.KimdenAd)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Kimden.KimdenAd)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IlanVResim)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IlanVResim)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IlanAdres)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IlanAdres)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IlanAciklama)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IlanAciklama)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IlanVitrin)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IlanVitrin)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

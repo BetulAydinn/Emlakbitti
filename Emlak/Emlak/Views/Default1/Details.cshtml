@@ -1,0 +1,36 @@
+﻿@model Emlak.Models.IlanDısOzellik
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>IlanDısOzellik</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.IDOID)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.IDOID)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Ilan.IlanBaslik)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Ilan.IlanBaslik)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.DısOzellik.DısOzellik1)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.DısOzellik.DısOzellik1)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id=Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
